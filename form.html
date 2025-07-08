@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zomato Login</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffe5e5, #ffffff);
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInBody 1s ease-in-out;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      animation: slideDown 0.6s ease-out;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 15px;
+      background: #fff;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .input-group img {
+      width: 24px;
+      margin-right: 5px;
+    }
+
+    .input-group select,
+    .input-group input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      flex: 1;
+      background: transparent;
+    }
+
+    .otp-button {
+      background-color: #ef4f5f;
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      animation: bounceIn 0.6s ease-in;
+    }
+
+    .otp-button:hover {
+      background-color: #d7374b;
+      transform: scale(1.05);
+    }
+
+    .or-line {
+      margin: 15px 0;
+      color: #888;
+      font-size: 14px;
+      animation: fadeIn 1s;
+    }
+
+    .btn-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s;
+      animation: fadeInUp 0.6s ease-in;
+    }
+
+    .btn-social img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .btn-social:hover {
+      background-color: #f8f8f8;
+      transform: scale(1.03);
+    }
+
+    .footer {
+      font-size: 13px;
+      color: #555;
+      margin-top: 10px;
+      animation: fadeIn 2s;
+    }
+
+    .footer a {
+      color: #ef4f5f;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInBody {
+      from { background-color: #fff; }
+      to { background: linear-gradient(135deg, #ffe5e5, #ffffff); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LOGIN</h1>
+
+    <div class="input-group">
+      <img src="https://flagcdn.com/w40/in.png" alt="IN Flag">
+      <select>
+        <option>+91</option>
+      </select>
+      <input type="text" placeholder="Phone">
+    </div>
+
+    <button class="otp-button">Send One Time Password</button>
+
+    <div class="or-line">or</div>
+
+    <div class="btn-social">
+      <img src="https://img.icons8.com/ios-filled/50/ef4f5f/new-post.png" alt="Email icon">
+      Continue with Email
+    </div>
+
+    <div class="btn-social">
+      <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google icon">
+      Sign in with Google
+    </div>
+
+    <div class="footer">
+      New to snapeats? <a href="sign.html">Create account</a>
+    </div>
+  </div>
+</body>
+</html>

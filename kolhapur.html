@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food of Kolhapur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #fffdf5;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h1 {
+      font-size: 40px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-left: 5px;
+      border: none;
+      background-color: #e74c3c;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+
+    pre {
+      font-size: 16px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    img {
+      border-radius: 10px;
+      margin: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://www.holidify.com/images/bgImages/KOLHAPUR.jpg" alt="Kolhapur" width="300">
+  <img src="https://www.holidify.com/images/compressed/1081.jpg" alt="Food" width="300">
+  <img src="https://www.holidify.com/images/cmsuploads/compressed/attr_1125_20191224160810.jpg" alt="Culture" width="300"><br>
+
+  <input type="text" id="searchBox" placeholder="Search for Food">
+  <button onclick="searchFood()">Search</button>
+
+  <h1>Food of Kolhapur</h1>
+  <pre>
+    <h2>TOP 5 FOODS </h2>
+<b>1. Kolhapuri Misal:</b>
+<a href="misal.html" target="_blank">
+<img src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/06/20174421/Untitled-design-3-15-1600x900.jpg" alt="Misal" width="200">
+</a>
+This is a spicy and flavorful dish made with sprouted lentils (matki), a special Kolhapuri gravy, and pav (bread). It's a must-try street food and a popular breakfast or lunch option. 
+
+<b>2. Kolhapuri Tambda and Pandhara Rassa (Mutton Curry):</b>
+<a href="nonvegthali.html" target="_blank">
+<img src="https://img-global.cpcdn.com/recipes/8c6708b76a582a2b/1200x630cq90/photo.jpg" alt="Rassa" width="200">
+</a>
+Kolhapur is renowned for its mutton dishes, particularly Tambda Rassa (red gravy) and Pandhara Rassa (white gravy). These curries are known for their rich flavors and are often enjoyed with rice or roti. 
+
+<b>3. Vada Pav:</b>
+<a href="vadapav.html" target="_blank">
+<img src="vadapav1.png" alt="Vada Pav" width="200">
+</a>
+A classic Mumbai street food, Vada Pav is also popular in Kolhapur. It consists of a deep-fried potato patty (vada) served in a soft bread roll (pav) with various chutneys and spices. 
+
+<b>4. Davangiri Loni Dosa:</b>
+<a href="dosa.html" target="_blank">
+<img src="https://content.jdmagicbox.com/comp/def_content/dosa-outlets/2-dosa-outlets-2-bi204.jpg" alt="Dosa" width="200">
+</a>
+This is a unique dosa variant made with a generous amount of butter, making it rich and flavorful. It's a popular choice for breakfast or a light meal. 
+
+<b>5. Non-Vegetarian Thalis:</b>
+<a href="nonvegthali.html" target="_blank">
+<img src="https://www.wannabemaven.com/wp-content/uploads/2018/12/kolhapur.jpg" alt="Thali" width="200">
+</a>
+Kolhapur offers a variety of non-vegetarian thalis, which are platters of multiple dishes including curries, rice, and other accompaniments. You can often find mutton thalis, chicken thalis, and fish thalis at various restaurants, according to online sources.
+  </pre>
+
+  <script>
+    function searchFood() {
+      const query = document.getElementById('searchBox').value.toLowerCase().trim();
+
+      if (query === 'misal') {
+        window.open('misal.html', '_blank');
+      } else if (query === 'vadapav') {
+        window.open('vadapav.html', '_blank');
+      } else if (query === 'veg thali') {
+        window.open('vegthali.html', '_blank');
+      } else if (query === 'non-veg thali') {
+        window.open('nonvegthali.html', '_blank');
+      } else if (query === 'loni dosa' || query === 'davanagiri loni dosa' || query === 'dosa') {
+        window.open('dosa.html', '_blank');
+      } else if (query === 'pav bhaji') {
+        window.open('pavbhaji.html', '_blank');
+      } else if (query === 'fast food' || query === 'fastfood') {
+        window.open('other.html', '_blank');
+      } else {
+        alert('No page found for "' + query + '"');
+      }
+    }
+  </script>
+
+</body>
+</html>

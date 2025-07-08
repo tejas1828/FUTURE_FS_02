@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vadapav Order</title>
+  <link rel="stylesheet" href="style.css">
+  <style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #fdfdfd;
+}
+
+.center {
+  text-align: center;
+}
+
+.logo img {
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+
+.slider {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+}
+
+.slides {
+  display: flex;
+  width: 200%;
+  animation: slide 10s infinite;
+}
+
+.slides img {
+  width: 500px;
+  height: 300px;
+}
+
+@keyframes slide {
+  0%, 25% { transform: translateX(0); }
+  35%, 60% { transform: translateX(-500px); }
+  70%, 100% { transform: translateX(0); }
+}
+
+.description {
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.order-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  animation: fadeInScale 1s ease;
+}
+
+.order-form h4 {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+input, select {
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+button {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+button:hover {
+  background-color: #d62828;
+}
+
+.spec-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.spec-item {
+  text-align: center;
+}
+
+.spec-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 6px;
+}
+
+.offer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  margin: 0 auto;
+  max-width: 600px;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.offer-box img {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="home.html">
+        <img src="c:/Users/Tejas/Downloads/Screenshot_2025-06-09_112003-removebg-preview.png" alt="Logo">
+      </a>
+    </div>
+  </header>
+
+  <h2 class="center"><b>Vadapav</b></h2>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="c:\Users\Tejas\Downloads\vadapav.png" alt="Slide 1">
+      <img src="c:\Users\Tejas\Downloads\vadapav1.png" alt="Slide 2">
+    </div>
+  </div>
+
+  <p class="description">
+   Spicy potato fritter tucked in a soft bun, served with chutneys – Mumbai's iconic street food, perfect for a quick and tasty bite!
+  </p>
+    <div class="spec-container">
+    <div class="spec-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" alt="Spicy Icon">
+      <p>Spicy Maharashtrian Taste</p>
+    </div>
+    <div class="spec-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/706/706164.png" alt="Farsan Icon">
+      <p>Includes Mirch & Pav</p>
+    </div>
+    <div class="spec-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/3103/3103446.png" alt="Timer Icon">
+      <p>Ready in 10 Minutes</p>
+    </div>
+  </div>
+
+  <div class="offer-box">
+    <span>All Offers & Coupons</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Right Arrow">
+  </div>
+
+  <form class="order-form">
+    <h4><b>Deliver to:</b> <input type="text" placeholder="Address" required></h4>
+    <div class="form-group">
+      <select required>
+        <option value="" disabled selected>EXTRA</option>
+                <option value="none">none</option>
+        <option value="2 PAV">PAV</option>
+      </select>
+      <input type="number" placeholder="Quantity" required>
+    </div>
+        <form action="response.html" method="GET">
+        <button type="submit">ORDER NOW</button>
+    
+  </form>
+
+
+<script>
+    document.querySelector("button").addEventListener("click", function() {
+      alert("Order Placed!");
+    });
+  </script>
+</body>
+</html>

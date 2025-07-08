@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Non-Veg Thali Order</title>
+  <link rel="stylesheet" href="style.css">
+  <style>body 
+  {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .icon {
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      padding: 10px;
+    }
+
+    .dropdown-content label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    .show {
+      display: block;
+    }
+    
+.center {
+  text-align: center;
+}
+
+.logo img {
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+
+.slider {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+}
+
+.slides {
+  display: flex;
+  width: 200%;
+  animation: slide 10s infinite;
+}
+
+.slides img {
+  width: 500px;
+  height: 300px;
+}
+
+@keyframes slide {
+  0%, 25% { transform: translateX(0); }
+  35%, 60% { transform: translateX(-500px); }
+  70%, 100% { transform: translateX(0); }
+}
+
+.description {
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.order-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  animation: fadeInScale 1s ease;
+}
+
+.order-form h4 {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+input, select {
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+button {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+button:hover {
+  background-color: #d62828;
+}
+
+.spec-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.spec-item {
+  text-align: center;
+}
+
+.spec-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 6px;
+}
+
+.offer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  margin: 0 auto;
+  max-width: 600px;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.offer-box img {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="home.html">
+        <img src="c:/Users/Tejas/Downloads/Screenshot_2025-06-09_112003-removebg-preview.png" alt="Logo">
+      </a>
+    </div>
+  </header>
+
+  <h2 class="center"><b>Non-Veg Thali</b></h2>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="c:\Users\Tejas\Downloads\nv.png" alt="Slide 1">
+      <img src="c:\Users\Tejas\Downloads\nv1.png" alt="Slide 2">
+    </div>
+  </div>
+
+  <p class="description">
+    A fiery and flavorful feast from Kolhapur, featuring spicy chicken/mutton curry, tambda and pandhra rassa, served with bhakri or rice – a true delight for non-veg lovers!
+  </p>
+    <div class="spec-container">
+    <div class="spec-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" alt="Spicy Icon">
+      <p>Spicy Maharashtrian Taste</p>
+    </div>
+    <div class="spec-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/706/706164.png" alt="Farsan Icon">
+      <p>Includes Farsan & Pav</p>
+    </div>
+    <div class="spec-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/3103/3103446.png" alt="Timer Icon">
+      <p>Ready in 10 Minutes</p>
+    </div>
+  </div>
+
+  <div class="offer-box">
+    <span>All Offers & Coupons</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Right Arrow">
+  </div>
+
+  <form class="order-form">
+    <h4><b>Deliver to:</b> <input type="text" placeholder="Address" required></h4>
+    <div class="form-group">
+       <div class="dropdown">
+    <div class="icon" onclick="toggleDropdown()">⋮</div>
+    <div id="dropdownOptions" class="dropdown-content">
+      <label><input type="checkbox" name="option1"> Option 1</label>
+      <label><input type="checkbox" name="option2"> Option 2</label>
+      <label><input type="checkbox" name="option3"> Option 3</label>
+      <label><input type="checkbox" name="option4"> Option 4</label>
+    </div>
+  </div>
+
+      <input type="number" placeholder="Quantity" required>
+    </div>
+        <form action="response.html" method="GET">
+        <button type="submit">ORDER NOW</button>
+    
+  </form>
+
+
+<script>
+  function toggleDropdown() {
+      document.getElementById("dropdownOptions").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside
+    window.onclick = function(event) {
+      if (!event.target.matches('.icon')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    document.querySelector("button").addEventListener("click", function() {
+      alert("Order Placed!");
+    });
+  </script>
+</body>
+</html>

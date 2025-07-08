@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNAPEATS - Order Food Online</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #c82727;
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(252, 238, 238, 0.1);
+    }
+
+    header ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    header ul li a {
+      text-decoration: none;
+      color: #e5e1e1;
+      font-weight: bold;
+    }
+
+    .logo img {
+      width: 200px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero input {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      background-color: #ff4e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .hero button:hover {
+      background-color: #ff3a3d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #fff;
+      margin-top: 30px;
+    }
+
+    .cities-section {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .cities-section h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .cities {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .cities button {
+      padding: 12px 25px;
+      background-color: #ff4e50;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cities button:hover {
+      background-color: #ff3a3d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="#">
+        <img src="e:\HTML\Project\bg1.png.png" alt="Logo">
+      </a>
+    </div>
+    <ul>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Signup</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h2>Welcome to SNAPEATS!</h2>
+      <p>Discover the best restaurants, trending dishes, and satisfy your cravings instantly.</p>
+      <input type="text" id="search" placeholder="Search For Restaurants or Food.">
+      <button id="searchBtn">Search</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 SNAPEATS. All rights reserved.
+  </footer>
+
+  <section class="cities-section">
+    <h1>Best Places to Eat Across Cities</h1>
+    <div class="cities">
+      <button onclick="navigateTo('kolhapur.html')">KOLHAPUR</button>
+      <button onclick="navigateTo('#')">PUNE</button>
+      <button onclick="navigateTo('#')">MUMBAI</button>
+      <button onclick="navigateTo('#')">HYDERABAD</button>
+      <button onclick="navigateTo('#')">BANGALORE</button>
+    </div>
+  </section>
+
+  <script>
+    // JS Script
+    function navigateTo(cityUrl) {
+      if (cityUrl !== '#') {
+        window.open(cityUrl, '_blank');
+      } else {
+        alert("Page coming soon for this city!");
+      }
+    }
+
+    document.getElementById('searchBtn').addEventListener('click', () => {
+      const query = document.getElementById('search').value.trim();
+      if (query) {
+        alert(`Searching for: "${query}"`);
+      } else {
+        alert("Please enter a search term!");
+      }
+    });
+  </script>
+</body>
+</html>

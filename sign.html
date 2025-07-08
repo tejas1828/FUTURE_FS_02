@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapeat - Sign Up</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #ffe6e6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .signup-container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            animation: popIn 0.6s ease;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #e74c3c;
+            outline: none;
+            box-shadow: 0 0 8px #ffe6e6;
+        }
+
+        .referral-button,
+        .signup-button {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .referral-button {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .signup-button {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .referral-button:hover {
+            background-color: #2980b9;
+        }
+
+        .signup-button:hover {
+            background-color: #c0392b;
+        }
+
+        .terms {
+            text-align: center;
+            font-size: 0.85em;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .terms a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <form action="/SignUp" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="address" placeholder="Address" required><br>
+            <input type="delievery address" placeholder="Delievery address" required><br>
+
+            <button type="button" class="referral-button">Have a referral code?</button>
+            <button type="submit" class="signup-button">Sign Up</button>
+
+            <div class="terms">
+                By creating an account, I accept the <a href="#">Terms & Conditions</a> & <a href="#">Privacy Policy</a>.
+            </div>
+        </form>
+    </div>
+</body>
+</html>
